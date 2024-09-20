@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhc5b733g7ine"]
+
+[ext_resource type="PackedScene" uid="uid://brfsm2tb3f4ej" path="res://Scenes/player.tscn" id="1_uqtnm"]
+[ext_resource type="PackedScene" uid="uid://b0ltr0f30v18i" path="res://Scenes/ground.tscn" id="2_4no3t"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1lckk"]
+
+[node name="TestingGrounds" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_uqtnm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.579087, 2.31222, -0.163145)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+
+[node name="Ground" parent="." instance=ExtResource("2_4no3t")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 143.836, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8894, 0.165993, -2.29084)
+mesh = SubResource("CylinderMesh_1lckk")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0ltr0f30v18i"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8188b"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wrew2"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="Ground" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_8188b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_wrew2")
