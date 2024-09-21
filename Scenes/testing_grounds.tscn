@@ -8,16 +8,14 @@
 [node name="TestingGrounds" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_uqtnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.579087, 2.31222, -0.163145)
-axis_lock_linear_x = true
-axis_lock_linear_z = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1603, 2.5545, -0.950752)
 
 [node name="Ground" parent="." instance=ExtResource("2_4no3t")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 143.836, 0)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8894, 0.165993, -2.29084)
 mesh = SubResource("CylinderMesh_1lckk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.445198, 0.895432, 0, -0.895432, -0.445198, 0, 4.05154, 0)
